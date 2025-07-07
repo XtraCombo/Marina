@@ -2262,7 +2262,7 @@
       // Function to check proxy status in the list
       function checkProxyStatusInList(proxy, statusBadge) {
         //Api Check Healt
-        const statusURL = `https://api.clubgratis.dpdns.org/api/check?ip=${proxy.ip}:${proxy.port}`;
+        const statusURL = `http://api.0ri.dpdns.org/api/v1?ip=${proxy.ip}:${proxy.port}`;
 
         fetch(statusURL)
           .then((response) => response.json())
@@ -2449,7 +2449,7 @@
       // Function to check proxy status in the account creation section
       function checkProxyStatus(proxy) {
         const startTime = performance.now();
-        const statusURL = `https://api.clubgratis.dpdns.org/api/check?ip=${proxy.ip}:${proxy.port}`;
+        const statusURL = `http://api.0ri.dpdns.org/api/v1?ip=${proxy.ip}:${proxy.port}`;
         const statusContainer = document.getElementById(
           "proxy-status-container"
         );
